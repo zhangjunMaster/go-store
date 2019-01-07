@@ -10,6 +10,7 @@ type PutStream struct {
 	c      chan error
 }
 
+// server指的是选中的server节点，是ip地址
 func NewPutStream(server, object string) *PutStream {
 	reader, writer := io.Pipe()
 	c := make(chan error)
